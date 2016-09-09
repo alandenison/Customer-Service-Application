@@ -1,0 +1,17 @@
+﻿@model IEnumerable<CustomerServiceApp.Models.Customer>
+
+<html>
+<head>
+    <title>Customers</title>
+</head>
+<body>
+    <h2>Customers</h2>
+    <h4>@Html.DisplayNameFor(model => model.Name)</h4>
+    <ul>
+        @foreach (var listItem in Model)
+        {
+            <li>@Html.DisplayFor(modelCustomer => listItem.Name)</li>
+        }
+    </ul>
+</body>
+</html>
