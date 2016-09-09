@@ -1,0 +1,13 @@
+﻿@model CustomerServiceApp.Models.Customer
+
+<html>
+<head>
+    <title>Edit Customer</title>
+</head>
+<body>
+    <h2>Edit customer information</h2>
+    <hr />
+    @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+    <p>@Html.ActionLink("back", "Index")</p>
+</body>
+</html>

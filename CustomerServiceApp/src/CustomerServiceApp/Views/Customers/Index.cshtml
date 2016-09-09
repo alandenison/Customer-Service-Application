@@ -6,11 +6,10 @@
 </head>
 <body>
     <h2>Customers</h2>
-    <h4>@Html.DisplayNameFor(model => model.Name)</h4>
-    <ul>
+    <ul> 
         @foreach (var listItem in Model)
         {
-            <li>@Html.DisplayFor(modelCustomer => listItem.Name)</li>
+            <li>@Html.DisplayFor(modelCustomer => listItem.Name) | @Html.ActionLink("Details", "Details", new { id = listItem.CustomerId })</li>
         }
     </ul>
 </body>

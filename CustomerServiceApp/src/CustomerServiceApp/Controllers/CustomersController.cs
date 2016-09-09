@@ -11,5 +11,10 @@ namespace CustomerServiceApp.Controllers
         {
             return View(db.Customers.ToList());
         }
+        public IActionResult Details(int id)
+        {
+            var thisCustomer = db.Customers.FirstOrDefault(Customers => Customers.CustomerId == id);
+            return View(thisCustomer);
+        }
     }
 }
