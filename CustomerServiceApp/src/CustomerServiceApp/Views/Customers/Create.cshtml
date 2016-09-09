@@ -1,0 +1,19 @@
+﻿@model CustomerServiceApp.Models.Customer
+
+<html>
+<head>
+    <title>Customer - Create</title>
+</head>
+<body>
+    <h2>New Customer</h2>
+    <hr />
+    <h4>Add a new customer</h4>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+        <input type="submit" value="Create" />
+    }
+    <p>@Html.ActionLink("Back to list", "Index")</p>
+</body>
+</html>
